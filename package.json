@@ -5,12 +5,14 @@
   "dependencies": {
     "bloomer": "^0.6.5",
     "bulma": "^0.7.4",
+    "goodreads-json-api": "^1.0.4",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "xml-js": "^1.6.11"
   },
   "scripts": {
     "start": "react-scripts start",

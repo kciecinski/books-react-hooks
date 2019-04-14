@@ -12,3 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.media-content-title{
+  color: black !important;
+}
+.card{
+  margin: 40px 0px;
+}
+.card .media:not(:last-child) {
+  margin-bottom: 4.5rem !important;
+}

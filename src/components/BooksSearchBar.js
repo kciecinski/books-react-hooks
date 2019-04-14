@@ -4,22 +4,22 @@ import {withRouter} from 'react-router-dom';
 
 function BooksSearchBar(props) {
 
-  const [books, setBooks] = useState([])
+  const [inputValue, setInputValue] = useState("");
 
   function handleClick(){
-    fetch('https://www.googleapis.com/books/v1/volumes?q=harry+potter')
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(responseJson) {
-     props.history.push('/bookList?q=harry+potter')
-    });
+    props.history.push(`/bookList?q=${inputValue}`)
+  }
+
+  function handleKey(e){
+    if(e.which == 13) {
+      handleClick();
+    }
   }
 
   return (
     <Field hasAddons="fullwidth">
       <Control>
-        <Input isSize="medium" type="text" placeholder='eq. Harry Potter' />
+        <Input  onKeyPress={handleKey} isSize="medium" type="text" placeholder='eq. Harry Potter' onChange={(e) => setInputValue(e.target.value)} />
       </Control>
       <Button isSize="medium" isColor="succes" onClick={handleClick}>
         Submit
