@@ -1,8 +1,14 @@
-import React from 'react'
+import React, {useRef, useEffect, useState} from 'react'
 import {Card, CardHeader, CardHeaderTitle, CardFooter, CardContent, CardImage, Media, MediaLeft, Image, MediaContent, Title, Subtitle, Content} from 'bloomer'
 import {Link} from 'react-router-dom'
 
 export default function BookCard(props) {
+
+const  createMarkup = () => { return {__html: props.info}; };
+
+
+    
+
   return (
     <Card>
         <CardHeader>
@@ -20,8 +26,7 @@ export default function BookCard(props) {
                     <Title className="media-content-title" isSize={4}> {props.title}</Title>
                 </MediaContent>
             </Media>
-            <Content>
-              {props.desc}
+            <Content dangerouslySetInnerHTML={createMarkup()}>
             </Content>
         </CardContent>
         <CardFooter>
