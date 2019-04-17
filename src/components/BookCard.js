@@ -30,7 +30,7 @@ const  createMarkup = () => { return {__html: props.info}; };
             </Content>
         </CardContent>
         <CardFooter>
-            <Link to={{ pathname :`/books/${props.title}`, state:{props} }}>See More</Link>
+            <Link to={{ pathname :`/books/${props.title}`, state:{id:props.id} }}>See More</Link>
         </CardFooter>
     </Card>
   )

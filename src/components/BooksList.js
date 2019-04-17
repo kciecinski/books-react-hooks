@@ -26,9 +26,9 @@ export default function BooksList(props) {
     <>
     {  books.map((book)=> 
       <BookCard key={book.id} title={book.volumeInfo.title} authors={book.volumeInfo.authors} desc={book.volumeInfo.description} smallThumb={ book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.smallThumbnail : ""}
-      bigThumb={ book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ""} info ={book.searchInfo.textSnippet}
+      bigThumb={ book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ""} info ={book.searchInfo? book.searchInfo.textSnippet : ""} id={book.id}
       />
     )}
     </>
   )
-}
+} 
